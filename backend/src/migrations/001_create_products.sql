@@ -4,5 +4,7 @@ CREATE TABLE IF NOT EXISTS produtos (
     ano INTEGER NOT NULL,
     modelo INTEGER NOT NULL,
     problema TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT unique_produto UNIQUE (pr, ano, modelo)
 );

@@ -1,8 +1,13 @@
 import {Router} from 'express';
-import {getProdutos} from '../controllers/produtoControllers.js';
+import {getProdutos, getProdutoPR, createProduto, updateProduto, deleteProduto } from '../controllers/produtoControllers.js';
 
 const routes = Router();
 
-routes.get("/produtos", getProdutos );
+//Rotas para produto
+routes.get("/produtos", getProdutos);
+routes.get("/produto", getProdutoPR);
+routes.post("/produto", createProduto);
+routes.patch("/produto", updateProduto);
+routes.delete("/produto", deleteProduto);
 
 export default routes;
